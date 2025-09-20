@@ -137,17 +137,17 @@ params:
   - "/images/og-default.avif"
 
   logo:
-    image: "/images/avatar.jpg"  # Logo path rel to static folder, leave empty use site title and primary color
+    image: "https://private-user-images.githubusercontent.com/20972223/491911506-997d3338-498e-4b17-bfbe-c9d64126a518.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTgzNzMyMjMsIm5iZiI6MTc1ODM3MjkyMywicGF0aCI6Ii8yMDk3MjIyMy80OTE5MTE1MDYtOTk3ZDMzMzgtNDk4ZS00YjE3LWJmYmUtYzlkNjQxMjZhNTE4LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA5MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwOTIwVDEyNTUyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY3NDI5Zjk3YTEzNGRhNDk5MGViOGZkZDA1ODZkZjE5NjEzZWIwNTVmY2EwMzdhMGI2YWM3YTRiZmQ4ZmYzOTImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.7-qqRIS3iQQltZwhPO1PHSD0A9iiYY04hRDFvHSbHJo"  # Logo path rel to static folder, leave empty use site title and primary color
     link: "/"                  # click to home page
   favicon:
-    svg: "/images/avatar.jpg"        # SVG format favicon (recommended)
+    svg: "https://private-user-images.githubusercontent.com/20972223/491911506-997d3338-498e-4b17-bfbe-c9d64126a518.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTgzNzMyMjMsIm5iZiI6MTc1ODM3MjkyMywicGF0aCI6Ii8yMDk3MjIyMy80OTE5MTE1MDYtOTk3ZDMzMzgtNDk4ZS00YjE3LWJmYmUtYzlkNjQxMjZhNTE4LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA5MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwOTIwVDEyNTUyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY3NDI5Zjk3YTEzNGRhNDk5MGViOGZkZDA1ODZkZjE5NjEzZWIwNTVmY2EwMzdhMGI2YWM3YTRiZmQ4ZmYzOTImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.7-qqRIS3iQQltZwhPO1PHSD0A9iiYY04hRDFvHSbHJo"        # SVG format favicon (recommended)
 
 
   author:
     name: "Trieu Hai Vo"
     title: "Ph.D. Student @ Florida International University, Miami, FL, USA."
     description: "Focus on Machine Learning, Deep Learning, Neural Networks, AI."
-    avatar: "/images/avatar.jpg"
+    avatar: "https://private-user-images.githubusercontent.com/20972223/491911506-997d3338-498e-4b17-bfbe-c9d64126a518.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTgzNzMyMjMsIm5iZiI6MTc1ODM3MjkyMywicGF0aCI6Ii8yMDk3MjIyMy80OTE5MTE1MDYtOTk3ZDMzMzgtNDk4ZS00YjE3LWJmYmUtYzlkNjQxMjZhNTE4LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA5MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwOTIwVDEyNTUyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY3NDI5Zjk3YTEzNGRhNDk5MGViOGZkZDA1ODZkZjE5NjEzZWIwNTVmY2EwMzdhMGI2YWM3YTRiZmQ4ZmYzOTImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.7-qqRIS3iQQltZwhPO1PHSD0A9iiYY04hRDFvHSbHJo"
     social:
       - name: "GitHub"
         url: "https://github.com/trieuhaivo"
