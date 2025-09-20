@@ -138,7 +138,7 @@ params:
   language: "en-US"
   shortName: "Trieu Vo"  # PWA
   images:
-  - "/images/og-default.avif"
+  - "/images/avatar.jpg"
 
   logo:
     image: "/images/avatar.jpg"  # Logo path rel to static folder, leave empty use site title and primary color
