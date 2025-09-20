@@ -27,7 +27,7 @@ On this trip, I went with my housemates and labmates to FIU Stadium to watch the
 
 ---
 
-Trong chuyến đi này, mình cùng các bạn trong nhà và đồng nghiệp trong phòng thí nghiệm đã đến Sân vận động FIU để xem đội FIU thi đấu với đội Bethune-Cookman. Đây là lần đầu tiên mình tham dự một trận bóng bầu dục Mỹ, và mình đã được trải nghiệm nhiều điều mới mẻ, thú vị, ấn tượng tại nơi đây.
+Trong chuyến đi này, mình cùng các bạn trong nhà và đồng nghiệp trong phòng lab đã đến Sân vận động FIU để xem đội FIU thi đấu với đội Bethune-Cookman. Đây là lần đầu tiên mình tham dự một trận bóng bầu dục Mỹ, và mình đã được trải nghiệm nhiều điều mới mẻ, thú vị, ấn tượng tại nơi đây.
 
 ---
 
