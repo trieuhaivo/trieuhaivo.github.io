@@ -11,6 +11,10 @@ enableEmoji: true
 permalinks:
   posts: /posts/:slug/
   pages: /:slug/
+
+caches:
+  images:
+    dir: :cacheDir/images
   
 # pagination
 pagination:
