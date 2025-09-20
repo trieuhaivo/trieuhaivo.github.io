@@ -17,6 +17,8 @@ lightbox:
 justified_gallery:
   enabled: true
 
+# jpegoptim --max=50 *.jpg # Nén ảnh
+
 ---
 
 ## Heading
