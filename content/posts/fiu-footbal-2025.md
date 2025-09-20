@@ -4,7 +4,7 @@ date: '2025-08-29'
 draft: false
 title: '🏈 FIU American Footbal 2025'
 
-summary: "A trip to FIU Stadium with my friends."
+summary: "A trip to FIU Stadium with my friends: Awsaf, Daniel, Sebastian."
 
 categories: ["Life"]
 tags: ["FIU", "Football"]
