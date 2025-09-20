@@ -13,7 +13,7 @@ author: "Trieu Hai Vo"
 cover: "/images/tmobile-09.2025/20250919_173121.jpg"
 
 lightbox:
-  enabled: false
+  enabled: true
 justified_gallery:
   enabled: true
 
@@ -34,40 +34,40 @@ Bạn chung nhà mình A. muốn mua iPhone mới, nên chúng mình đã đến
 
 {{< masonry columns=3 gutter=15 >}}
 
-![alt text](/images/tmobile-09.2025/20250919_171906.jpg)
-![alt text](/images/tmobile-09.2025/20250919_171915.jpg)
-![alt text](/images/tmobile-09.2025/20250919_171916.jpg)
+![](/images/tmobile-09.2025/20250919_171906.jpg)
+![](/images/tmobile-09.2025/20250919_171915.jpg)
+![](/images/tmobile-09.2025/20250919_171916.jpg)
 
 {{< /masonry >}}
 
 {{< masonry columns=3 gutter=15 >}}
 
-![alt text](/images/tmobile-09.2025/20250919_172055.jpg)
-![alt text](/images/tmobile-09.2025/20250919_172103.jpg)
-![alt text](/images/tmobile-09.2025/20250919_172233.jpg)
+![](/images/tmobile-09.2025/20250919_172055.jpg)
+![](/images/tmobile-09.2025/20250919_172103.jpg)
+![](/images/tmobile-09.2025/20250919_172233.jpg)
 
 {{< /masonry >}}
 
 {{< masonry columns=3 gutter=15 >}}
 
-![alt text](/images/tmobile-09.2025/20250919_172338.jpg)
-![alt text](/images/tmobile-09.2025/20250919_172351.jpg)
-![alt text](/images/tmobile-09.2025/20250919_172654.jpg)
+![](/images/tmobile-09.2025/20250919_172338.jpg)
+![](/images/tmobile-09.2025/20250919_172351.jpg)
+![](/images/tmobile-09.2025/20250919_172654.jpg)
 
 {{< /masonry >}}
 
 {{< masonry columns=3 gutter=15 >}}
 
-![alt text](/images/tmobile-09.2025/20250919_173051.jpg)
-![alt text](/images/tmobile-09.2025/20250919_173103.jpg)
-![alt text](/images/tmobile-09.2025/20250919_173121.jpg)
+![](/images/tmobile-09.2025/20250919_173051.jpg)
+![](/images/tmobile-09.2025/20250919_173103.jpg)
+![](/images/tmobile-09.2025/20250919_173121.jpg)
 
 {{< /masonry >}}
 
 {{< masonry columns=3 gutter=15 >}}
 
-![alt text](/images/tmobile-09.2025/20250919_183250.jpg)
-![alt text](/images/tmobile-09.2025/20250919_183254.jpg)
+![](/images/tmobile-09.2025/20250919_183250.jpg)
+![](/images/tmobile-09.2025/20250919_183254.jpg)
 
 {{< /masonry >}}
 

@@ -13,7 +13,7 @@ author: "Trieu Hai Vo"
 cover: ""
 
 lightbox:
-  enabled: false
+  enabled: true
 justified_gallery:
   enabled: true
 
