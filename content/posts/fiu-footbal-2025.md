@@ -2,7 +2,7 @@
 
 date: '2025-08-29'
 draft: false
-title: 'FIU Footbal 2025'
+title: '🏈 FIU American Footbal 2025'
 
 summary: "A trip to FIU Stadium with my friends."
 
