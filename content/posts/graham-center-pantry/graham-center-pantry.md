@@ -11,7 +11,7 @@ categories: ["Life"]
 tags: ["FIU", "Food", "Graham-Center"]
 author: "Trieu Hai Vo"
 
-cover: ""
+cover: "/posts/graham-center-pantry/20250923_143637.jpg"
 
 lightbox:
   enabled: true
