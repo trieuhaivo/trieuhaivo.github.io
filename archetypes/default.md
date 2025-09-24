@@ -21,11 +21,7 @@ justified_gallery:
 
 ---
 
-## Heading
-
----
-
-![]()
+<!-- ## Heading -->
 
 ---
 
