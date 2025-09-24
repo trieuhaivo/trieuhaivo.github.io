@@ -138,20 +138,20 @@ params:
   language: "en-US"
   shortName: "Trieu Vo"  # PWA
   images:
-  - "/images/avatar.jpg"
+  - "/posts/avatar.jpg"
 
   logo:
-    image: "/images/avatar.jpg"  # Logo path rel to static folder, leave empty use site title and primary color
+    image: "/posts/avatar.jpg"  # Logo path rel to static folder, leave empty use site title and primary color
     link: "/"                  # click to home page
   favicon:
-    svg: "/images/avatar.jpg"        # SVG format favicon (recommended)
+    svg: "/posts/avatar.jpg"        # SVG format favicon (recommended)
 
 
   author:
     name: "Trieu Hai Vo"
     title: "Ph.D. Student @ Florida International University, Miami, FL, USA."
     description: "Focus on Machine Learning, Deep Learning, Neural Networks, AI."
-    avatar: "/images/avatar.jpg"
+    avatar: "/posts/avatar.jpg"
     social:
       - name: "GitHub"
         url: "https://github.com/trieuhaivo"

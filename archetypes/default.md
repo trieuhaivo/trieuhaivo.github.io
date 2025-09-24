@@ -35,26 +35,8 @@ justified_gallery:
 
 ---
 
-{{< masonry columns=2 gutter=15 >}}
+{{< masonry columns=3 gutter=15 >}}
 
-
-
-{{< /masonry >}}
-
-{{< masonry columns=2 gutter=15 >}}
-
-
-
-{{< /masonry >}}
-
-{{< masonry columns=2 gutter=15 >}}
-
-
-
-{{< /masonry >}}
-
-{{< masonry columns=2 gutter=15 >}}
-
-
+<!-- Thêm vào cuối { width=300 height=200 } -->
 
 {{< /masonry >}}
