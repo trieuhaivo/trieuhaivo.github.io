@@ -4,7 +4,7 @@ date: '2025-09-23T19:27:25-04:00'
 draft: false
 title: '🍔 8th Street Kitchen FIU'
 
-summary: ""
+summary: "A trip to 8th Street Kitchen FIU"
 
 categories: ["Life"]
 tags: ["FIU", "Food", "Kitchen"]
