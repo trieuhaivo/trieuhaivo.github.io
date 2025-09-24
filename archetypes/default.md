@@ -1,6 +1,7 @@
 ---
 
 date: '{{ .Date }}'
+
 title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 
 draft: true
@@ -8,7 +9,9 @@ draft: true
 summary: ""
 
 categories: [""]
+
 tags: [""]
+
 author: "Trieu Hai Vo"
 
 cover: ""
