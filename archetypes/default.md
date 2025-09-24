@@ -17,7 +17,9 @@ lightbox:
 justified_gallery:
   enabled: true
 
-# jpegoptim --max=50 *.jpg # Nén ảnh
+# jpegoptim --max=50 *.jpg # Compress images
+
+# git clean -f # Delete untracked files
 
 ---
 
