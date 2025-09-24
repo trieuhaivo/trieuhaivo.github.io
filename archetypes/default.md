@@ -23,6 +23,8 @@ justified_gallery:
 
 ## Heading
 
+---
+
 ![]()
 
 ---
@@ -35,8 +37,4 @@ justified_gallery:
 
 ---
 
-{{< masonry columns=3 gutter=15 >}}
-
-<!-- Thêm vào cuối { width=300 height=200 } -->
-
-{{< /masonry >}}
+![]()
