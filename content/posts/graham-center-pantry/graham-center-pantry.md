@@ -1,11 +1,11 @@
 ---
 
 date: '2025-09-23T23:12:22-04:00'
-title: 'Graham Center - Food Pantry'
+title: '🥫 Graham Center - Food Pantry'
 
 draft: false
 
-summary: "🥫 A trip to Graham Center and Visit Food Pantry of FIU"
+summary: "A trip to Graham Center and Visit Food Pantry of FIU"
 
 categories: ["Life"]
 tags: ["FIU", "Food", "Graham-Center"]
