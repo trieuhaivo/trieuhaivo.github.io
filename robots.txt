@@ -1,0 +1,8 @@
+User-agent: *
+Disallow:
+
+# Privacy: discourage search engines and reverse-image-search engines from indexing the AI2ES group photo,
+# which contains identifiable third parties beyond the site owner. Direct visitors still see it.
+Disallow: /assets/img/news/ai2es_meeting_2024-06-19_group.jpg
+
+Sitemap: https://trieuhaivo.github.io/sitemap.xml
