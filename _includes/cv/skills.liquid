@@ -1,0 +1,18 @@
+{% comment %}
+  Unified skills entry renderer.
+  Reads OneLineEntry format (label + details) — also rendered by RenderCV.
+{% endcomment %}
+
+<div class="card-text font-weight-light">
+  {% for entry in entries %}
+    <div class="skill-item">
+      <strong>{{ entry.label }}:</strong> {{ entry.details }}
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+  .skill-item {
+    padding: 0.5rem 0;
+  }
+</style>

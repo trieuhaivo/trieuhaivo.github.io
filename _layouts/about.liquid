@@ -1,0 +1,122 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header">
+    <h1 class="sr-only">{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }} — PhD Student, Florida International University</h1>
+  </header>
+
+  <article>
+    <div class="cv">
+      {% assign cv = site.data.cv.cv %}
+
+      <!-- Banner + Avatar overlay -->
+      <div class="banner-wrapper mt-3">
+        <div class="banner-container">
+          {%- comment -%}
+            WCAG 1.1.1: Banner is purely decorative (mountain-lake panorama; no informational
+            content). Empty alt + role="presentation" tells screen readers to skip it. Do NOT
+            add a descriptive alt unless the banner becomes informational (e.g., a research
+            figure). Adding one would force screen-reader users to listen to redundant filler.
+          {%- endcomment -%}
+          <img src="{{ '/assets/img/banner.jpg' | relative_url }}" class="banner-image" alt="" role="presentation">
+        </div>
+        {% if page.profile and page.profile.image %}
+          <div class="avatar-overlay">
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            <img src="{{ profile_image_path | relative_url }}" class="avatar-img" alt="Portrait of {{ site.first_name }} {{ site.last_name }}" loading="eager">
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- About -->
+      <a class="anchor" id="about"></a>
+      <div class="card p-3 about-card" style="border-top: none; border-radius: 0 0 16px 16px !important; margin-top: -20px; position: relative; z-index: 1;">
+        <h2 class="card-title font-weight-medium">About</h2>
+        <div style="margin-top: 0.5rem;">{{ content }}</div>
+        {% if page.social %}
+          <div style="clear: both;"></div>
+          <div class="social" style="margin-top: 1rem;">
+            <div class="contact-icons">{% social_links %}</div>
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- News -->
+      {% if page.announcements and page.announcements.enabled %}
+        <a class="anchor" id="news"></a>
+        <div class="card mt-3 p-3">
+          <h2 class="card-title font-weight-medium">
+            <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
+          </h2>
+          {% include news.liquid limit=true %}
+        </div>
+      {% endif %}
+
+      <!-- Publications -->
+      {% if page.selected_papers %}
+        <a class="anchor" id="publications"></a>
+        <div class="card mt-3 p-3">
+          <h2 class="card-title font-weight-medium">Publications</h2>
+          <div class="publications">
+            {% bibliography %}
+          </div>
+        </div>
+      {% endif %}
+
+      <!-- CV Sections from cv.yml -->
+      {% for section_pair in cv.sections %}
+        {% assign section_title = section_pair[0] %}
+        {% assign section_entries = section_pair[1] %}
+
+        {% if section_title == 'Volunteer' or section_title == 'Publications' %}
+          {% continue %}
+        {% endif %}
+
+        {% if section_title == 'Experience' %}
+          {% assign empty_array = '' | split: ',' %}
+          {% assign vol = cv.sections.Volunteer | default: empty_array %}
+          {% assign section_entries = section_entries | concat: vol %}
+        {% endif %}
+
+        <a class="anchor" id="{{ section_title | slugify }}"></a>
+        <div class="card mt-3 p-3">
+          <h2 class="card-title font-weight-medium">{{ section_title }}</h2>
+          <div>
+            {% if section_title == 'Education' %}
+              {% assign entries = section_entries %}
+              {% include cv/education.liquid %}
+            {% elsif section_title == 'Experience' %}
+              {% assign entries = section_entries %}
+              {% include cv/experience.liquid %}
+            {% elsif section_title == 'Awards' or section_title == 'Honors and Awards' %}
+              {% assign entries = section_entries %}
+              {% include cv/awards.liquid %}
+            {% elsif section_title == 'Skills' %}
+              {% assign entries = section_entries %}
+              {% include cv/skills.liquid %}
+            {% elsif section_title == 'Languages' %}
+              {% assign entries = section_entries %}
+              {% include cv/languages.liquid %}
+            {% elsif section_title == 'Interests' or section_title == 'Academic Interests' %}
+              {% assign entries = section_entries %}
+              {% include cv/interests.liquid %}
+            {% elsif section_title == 'Certificates' %}
+              {% assign entries = section_entries %}
+              {% include cv/certificates.liquid %}
+            {% else %}
+              {% for entry in section_entries %}
+                {% if entry.bullet %}
+                  <ul class="card-text font-weight-light list-group list-group-flush">
+                    <li class="list-group-item">{{ entry.bullet | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+                  </ul>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+  </article>
+</div>

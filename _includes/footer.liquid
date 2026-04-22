@@ -1,0 +1,11 @@
+{% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
+<footer class="{% if site.footer_fixed %}fixed-bottom{% else %}sticky-bottom{% endif %}" role="contentinfo">
+  <div class="container">
+    <p class="mb-0">
+      &copy; {{ site.time | date: '%Y' }} <strong>{{ author_name }}</strong>
+      &middot; PhD Student, Computer Science
+      &middot; <a href="https://www.fiu.edu/">Florida International University</a>
+      &middot; <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>
+    </p>
+  </div>
+</footer>

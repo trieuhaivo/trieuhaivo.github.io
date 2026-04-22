@@ -1,0 +1,220 @@
+# RenderCV v2 settings (cv.yml is the single source for both al-folio liquid + rendercv PDF).
+# Al-folio templates only read `cv.*`; design/locale below are consumed only by `rendercv render`.
+design:
+  theme: engineeringclassic
+  page:
+    size: us-letter
+    top_margin: 1.5cm
+    bottom_margin: 1.5cm
+    left_margin: 1.5cm
+    right_margin: 1.5cm
+    show_page_numbering: true
+  colors:
+    text: rgb(17, 24, 39)
+    name: rgb(0, 33, 71)
+    connections: rgb(17, 24, 39)
+    section_titles: rgb(0, 33, 71)
+    links: rgb(0, 51, 102)  # darkened from rgb(14,77,146) for higher PDF contrast (~7:1 vs body text)
+  text:
+    font_family: XCharter
+    font_size: 10pt
+    leading: 0.85em
+    alignment: justified
+  highlights:
+    vertical_space_between_highlights: 0.28cm
+    top_margin: 0.25cm
+  entries:
+    vertical_space_between_entries: 1.05em
+  section_titles:
+    type: with-partial-line
+    font_family: XCharter
+    font_size: 1.3em
+    bold: true
+    small_caps: false
+    vertical_space_above: 0.35cm
+    vertical_space_below: 0.3cm
+  header:
+    name_font_family: XCharter
+    name_font_size: 28pt
+    name_bold: true
+    small_caps_for_name: false
+    connections_font_family: XCharter
+    separator_between_connections: " · "
+    vertical_space_between_name_and_connections: 0.4cm
+    vertical_space_between_connections_and_first_section: 0.5cm
+    horizontal_space_between_connections: 0.4cm
+    alignment: center
+locale:
+  language: en
+
+cv:
+  name: Trieu Hai Vo
+  label: PhD Student in Computer Science
+  email: tvo013@fiu.edu
+  location: Miami, FL
+  image: ""
+  summary: PhD Student in Computer Science at Florida International University developing deep-learning methods for environmental time-series imputation and forecasting. Peer-reviewed author at the ICLR 2025 Workshop on Tackling Climate Change with Machine Learning; current research under peer review at ACM SIGKDD 2026.
+
+  social_networks:
+    - network: GitHub
+      username: trieuhaivo
+    - network: LinkedIn
+      username: vhtrieu
+
+  address:
+    city: Miami
+    region: Florida
+    countryCode: US
+
+  sections:
+    Education:
+      - institution: Florida International University
+        location: Miami, FL
+        url: https://www.fiu.edu/
+        area: Computer Science
+        degree: Ph.D.
+        studyType: Doctor of Philosophy (Ph.D.)  # al-folio website (full text); RenderCV uses degree
+        start_date: 2024-05
+        end_date: present
+        highlights:
+          - "Advisors: [Prof. Leonardo Bobadilla](https://www.cis.fiu.edu/faculty-staff/leonardo-bobadilla/) (Florida International University) and [Prof. Cuong V. Nguyen](https://www.durham.ac.uk/staff/viet-c-nguyen/) (Durham University, United Kingdom)"
+          - "Research: Deep learning for environmental time series; axis-factored attention architectures; water-quality imputation and forecasting"
+          - "Passed PhD Qualifying Examination (April 2026)"
+
+      - institution: Northeastern University
+        location: Boston, MA
+        url: https://www.northeastern.edu/
+        area: Artificial Intelligence
+        degree: M.S.
+        studyType: Master of Science (M.S.)
+        start_date: 2021-09
+        end_date: 2023-07
+        highlights:
+          - "GPA: 3.91 / 4.00"
+          - "Concentration: Artificial Intelligence"
+          - "Coursework: Artificial Intelligence, Machine Learning, Data Science, Data Mining, Big Data, Predictive Analytics, Healthcare Information Processing"
+
+      - institution: Vietnam National University — University of Science
+        location: Ho Chi Minh City, Vietnam
+        url: https://en.hcmus.edu.vn/
+        area: Computer Science (Advanced Program)
+        degree: B.S.
+        studyType: Bachelor of Science (B.S.)
+        start_date: 2014-09
+        end_date: 2018-11
+        highlights:
+          - "GPA: 3.65 / 4.00 (Advanced Program, instruction in English)"
+          - "Honors thesis: \"Brain Tumor Segmentation in MRI Images Using Convolutional Neural Networks\" — advised by [Dr. Tien B. Dinh](https://www.fit.hcmus.edu.vn/graduate/instructors) (Dean of the Faculty of Information Technology, VNU-HCMUS)"
+          - "Rector's Merit Award and Medal for outstanding academic achievement (2018)"
+
+    Publications:
+      - title: "Depth-wise Multivariate Imputation for Environmental Time Series"
+        authors:
+          - "Trieu H. Vo"
+          - "Cuong V. Nguyen"
+          - "Ana Sophia Cavalcanti"
+          - "Leonardo Bobadilla"
+        journal: "[ACM SIGKDD 2026](https://kdd2026.kdd.org/) (under peer review)"
+        date: 2026
+
+      - title: "Lake Water Temperature Modeling Using Physics-Informed Neural Networks"
+        authors:
+          - "Trieu H. Vo"
+          - "Cuong V. Nguyen"
+          - "Dongsheng Luo"
+          - "Leonardo Bobadilla"
+        journal: "[ICLR 2025 Workshop on Tackling Climate Change with Machine Learning](https://www.climatechange.ai/papers/iclr2025/48), Singapore"
+        date: 2025
+
+    "Talks and Presentations":
+      - bullet: "**\"Learning and Planning for Water Quality Monitoring\"** — co-presented with [Prof. Leonardo Bobadilla](https://www.cis.fiu.edu/faculty-staff/leonardo-bobadilla/) at the *FIU AI/ML and Modeling Collaboration Meeting* (June 19–20, 2024, FIU International Center for Tropical Botany, Coconut Grove, FL), hosted under the [NSF AI2ES](https://www.ai2es.org/) ExpandAI partnership with external partners including the South Florida Water Management District (SFWMD) and Texas A&M–Corpus Christi."
+      - bullet: "**Poster: \"Lake Water Temperature Modeling Using Physics-Informed Neural Networks\"** — peer-reviewed poster presentation at the *ICLR 2025 Workshop on Tackling Climate Change with Machine Learning* (April 28, 2025, Singapore)."
+
+    Experience:
+      - company: "[Florida International University](https://www.fiu.edu/)"
+        position: PhD Research Assistant
+        location: Miami, FL
+        start_date: 2024-05
+        end_date: present
+        highlights:
+          - "The [NSF AI Institute for Research on Trustworthy AI in Weather, Climate, and Coastal Oceanography (AI2ES)](https://www.ai2es.org/) funds my doctoral research via the FIU–AI2ES ExpandAI partnership"
+          - "Developing Depth-wise Multivariate Imputation (DMI) — a deep-learning architecture with axis-factored attention for imputing missing measurements across multi-depth environmental sensor networks (see Publications)"
+          - "Designed and implemented a physics-informed neural network combining Koopman operator theory with LSTM recurrent networks for long-horizon lake water-temperature forecasting; published at [ICLR 2025 Workshop on Tackling Climate Change with Machine Learning](https://www.climatechange.ai/events/iclr2025)"
+          - "Conducting empirical studies on real-world water-quality datasets, including the LakeBeD-US benchmark and a newly collected multi-depth dataset from Miami, FL"
+
+      - company: "[Breathing.ai](https://www.breathing.ai/)"
+        position: AI Engineer
+        location: New York, NY (Remote)
+        start_date: 2023-06
+        end_date: 2024-02
+        highlights:
+          - "Engineered webcam-based heart-rate and stress detection using remote photoplethysmography (rPPG), integrating MTTS-CAN, CHROM, and POS signal-processing methods"
+          - "Deployed a real-time contact-free physiological-sensing pipeline on Amazon Web Services, distributed as a Chrome extension for continuous wellbeing monitoring"
+
+      - company: "[Breathing.ai](https://www.breathing.ai/)"
+        position: AI Intern
+        location: Boston, MA (Remote)
+        start_date: 2022-09
+        end_date: 2022-12
+        highlights:
+          - "Developed machine-learning models (XGBoost, Random Forest, Convolutional Neural Networks) to predict physiological state from wearable-device and facial-video data"
+          - "Achieved 95% accuracy on real-time drowsiness detection using a CNN-based vision model"
+
+      - company: Self-employed
+        position: Private Tutor
+        location: Ho Chi Minh City, Vietnam
+        start_date: 2019-01
+        end_date: 2021-08
+        highlights:
+          - "Private tutoring during the COVID-19 period while preparing for U.S. graduate study; ranked first in the [VietAI](https://vietai.org/) Machine Learning Foundation Course (June 2019) and earned IELTS Academic 7.5 (January 2021)."
+
+      - company: "[KMS Technology, Inc.](https://kms-technology.com/)"
+        position: AI Intern
+        location: Ho Chi Minh City, Vietnam
+        start_date: 2017-10
+        end_date: 2018-05
+        highlights:
+          - "Built a production Résumé Parsing System for enterprise hiring, combining NLP classification with named-entity extraction (title-recognition F1 = 0.92; paragraph-classification F1 = 0.99)"
+
+    Awards:
+      - name: "VietAI Machine Learning Foundation Course — Top Student (full tuition refund)"
+        date: "Jun 2019"
+        awarder: "VietAI (Vietnam AI Initiative)"
+        summary: "Ranked first in a selective nationwide cohort of the [**VietAI (Vietnam AI Initiative)**](https://vietai.org/) Machine Learning Foundation Course and received a full tuition refund for top-student standing."
+
+      - name: Rector's Merit Award and Medal
+        date: "Nov 2018"
+        awarder: "Vietnam National University — University of Science (VNU-HCMUS)"
+        summary: "The Rector of [**Vietnam National University — University of Science (VNU-HCMUS)**](https://en.hcmus.edu.vn/) conferred this top academic honor for outstanding achievement across the Computer Science (Advanced Program) undergraduate curriculum."
+
+      - name: "Academic Merit Scholarships — 4-year continuous recipient"
+        date: "2014"
+        awarder: Vietnam National University — University of Science
+        summary: "Merit-based academic scholarships awarded each semester by [**Vietnam National University — University of Science**](https://en.hcmus.edu.vn/) for sustained academic excellence in the Advanced Program (2014–2018)."
+
+    Skills:
+      - label: Primary tools
+        details: Python, PyTorch, LaTeX, Git
+      - label: Methods
+        details: Deep learning, time-series modelling, structured attention, physics-informed neural networks, diffusion models, Koopman operator methods
+      - label: Domains
+        details: Environmental AI, water-quality monitoring, medical and physiological sensing
+
+    Certificates:
+      - label: "Mathematics for Machine Learning & Data Science"
+        details: "DeepLearning.AI — Calculus + Linear Algebra (February 2024)"
+      - label: "Understanding Research Methods"
+        details: "University of London (April 2024)"
+      - label: "Algorithms — Elementary + Intermediate"
+        details: "Big-O Coding (selective Vietnamese coding program; August + November 2023)"
+      - label: "Python — Skill Assessment"
+        details: "HackerRank (April 2021)"
+      - label: "IELTS Academic 7.5"
+        details: "[IDP Education](https://www.idp.com/) (January 2021)"
+
+    Languages:
+      - label: Vietnamese
+        details: Native speaker
+      - label: English
+        details: Fluent (see IELTS certificate above)
+

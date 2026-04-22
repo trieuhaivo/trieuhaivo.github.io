@@ -1,0 +1,243 @@
+/*******************************************************************************
+ * Navigation bar and header customization
+ ******************************************************************************/
+
+@use "variables" as v;
+
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid var(--global-divider-color);
+  background-color: var(--global-bg-color);
+  opacity: 1;
+}
+
+.navbar .dropdown-menu,
+.btn-group.dropdown .dropdown-menu {
+  background-color: var(--global-bg-color);
+  border: 1px solid var(--global-divider-color);
+
+  a:not(.active) {
+    color: var(--global-text-color);
+  }
+
+  a:hover {
+    color: var(--global-hover-color);
+  }
+
+  .dropdown-divider {
+    border-top: 1px solid var(--global-divider-color) !important;
+  }
+}
+
+.dropdown-item {
+  color: var(--global-text-color);
+
+  &:hover {
+    color: var(--global-hover-color);
+    background-color: var(--global-bg-color);
+  }
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--global-hover-color);
+  color: var(--global-hover-text-color) !important;
+
+  &:hover {
+    color: var(--global-hover-text-color);
+  }
+}
+
+.navbar.navbar-light {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .navbar-brand {
+    color: var(--global-text-color);
+  }
+
+  .navbar-brand.title {
+    font-family: "Source Serif 4", "Source Serif Pro", Georgia, serif;
+    font-size: 1.35rem;
+    letter-spacing: 0.01em;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    color: var(--global-text-color);
+    /* WCAG 2.5.5: ≥44×44 px touch target. Inline-flex centers text vertically. */
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+      color: var(--global-hover-color);
+    }
+
+    /* WCAG 2.4.7: explicit focus-visible (Bootstrap default omitted on .nav-link). */
+    &:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+  }
+
+  .navbar-nav .nav-item.active > .nav-link {
+    background-color: inherit;
+    font-weight: bolder;
+    color: var(--global-theme-color);
+
+    &:hover {
+      color: var(--global-hover-color);
+    }
+  }
+
+  .navbar-brand.social {
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 1.7rem;
+
+    a {
+      img {
+        width: 1.7rem;
+        height: 1.7rem;
+        margin-bottom: 0.5rem;
+        // margin: 0.5rem;
+      }
+
+      svg {
+        width: 1.7rem;
+        height: 1.7rem;
+        margin-bottom: 0.5rem;
+
+        image {
+          width: 1.7rem;
+          height: 1.7rem;
+        }
+      }
+
+      i::before {
+        color: var(--global-text-color);
+        transition-property: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        i::before {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  /* WCAG 2.5.5: explicit ≥44 px touch target. Bootstrap default padding usually
+     reaches this, but the explicit constraint removes ambiguity for screen-density
+     edge cases. */
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--global-text-color);
+    border-radius: 1px;
+    margin-bottom: 4px;
+    transition: all 0.2s;
+  }
+
+  .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+
+  .middle-bar {
+    opacity: 0;
+  }
+
+  .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+}
+
+.navbar-toggler.collapsed {
+  .top-bar {
+    transform: rotate(0);
+  }
+
+  .middle-bar {
+    opacity: 1;
+  }
+
+  .bottom-bar {
+    transform: rotate(0);
+  }
+}
+
+#light-toggle {
+  padding: 0.5rem;
+  border: 0;
+  background-color: inherit;
+  color: var(--global-text-color);
+  /* Fix footprint to prevent navbar shifting when icon changes; min 44x44px per WCAG 2.5.5 */
+  min-width: 44px;
+  min-height: 44px;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: var(--global-hover-color);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* No translateY on #light-toggle — let Bootstrap navbar's flex align-items:center handle vertical centering. */
+
+#search-toggle {
+  padding: 0.5rem;
+  border: 0;
+  background-color: inherit;
+  color: var(--global-text-color);
+  /* Fix footprint to prevent navbar shifting; min 44x44px per WCAG 2.5.5 */
+  min-width: 44px;
+  min-height: 44px;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* The search-toggle's icon is wrapped in <span class="nav-link"> (unlike #light-toggle which holds <i> directly).
+     Bootstrap's .nav-link applies 0.5rem 1rem padding which displaces the icon. Neutralize inside the toggle button. */
+  & .nav-link {
+    padding: 0;
+    margin: 0;
+  }
+
+  &:hover {
+    color: var(--global-hover-color);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* No translateY on #search-toggle — let Bootstrap navbar's flex align-items:center handle vertical centering. */

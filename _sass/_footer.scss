@@ -1,0 +1,132 @@
+/*******************************************************************************
+ * Footer styles
+ ******************************************************************************/
+
+footer.fixed-bottom {
+  background-color: var(--global-footer-bg-color);
+  color: var(--global-footer-text-color);
+  border-top: 1px solid var(--global-divider-color);
+  font-size: 0.75rem;
+
+  .container {
+    color: var(--global-footer-text-color);
+    padding-top: 9px;
+    padding-bottom: 8px;
+    text-align: center;
+  }
+
+  p,
+  strong {
+    color: var(--global-footer-text-color);
+  }
+
+  a {
+    color: var(--global-footer-link-color);
+
+    &:hover {
+      color: var(--global-hover-color);
+      text-decoration: underline;
+    }
+  }
+}
+
+footer.sticky-bottom {
+  margin-top: 3rem;
+  background-color: var(--global-footer-bg-color);
+  color: var(--global-footer-text-color);
+  border-top: 1px solid var(--global-divider-color);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 0.85rem;
+
+  .container {
+    text-align: center;
+    color: var(--global-footer-text-color);
+  }
+
+  strong {
+    color: #ffffff;
+  }
+
+  a {
+    color: var(--global-footer-link-color);
+
+    &:hover {
+      color: var(--global-hover-color);
+      text-decoration: underline;
+    }
+
+    /* WCAG 2.4.7: explicit focus-visible (parity with .nav-link) so keyboard users
+       see clear focus on footer links, not the browser default subtle ring. */
+    &:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+
+  /* Note: no base-level line-height override here. Desktop inherits body's
+     line-height: 1.85 unchanged — important because earlier this rule lived
+     here and silently changed desktop footer line spacing.
+     Mobile media queries below scope tighter leading explicitly. */
+
+  /* Tablet — moderate compaction */
+  @media (max-width: 768px) {
+    margin-top: 1.5rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    font-size: 0.78rem;
+
+    .container {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+
+    p,
+    p.mb-0 {
+      line-height: 1.45;
+    }
+  }
+
+  /* Phone — aggressive compaction.
+     The footer text wraps to 3-4 lines on a 360–414 px viewport. We push margin,
+     padding, font-size, and line-height down so the chrome around the wrapped
+     block reads as a quiet horizon line, not a navigation block competing with
+     the main content. */
+  @media (max-width: 480px) {
+    margin-top: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 0.72rem;
+
+    .container {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    p,
+    p.mb-0 {
+      line-height: 1.4;
+    }
+
+    /* WCAG 2.5.5: at 0.72rem, anchor text is ~10–11 px tall; padding lifts
+       the interactive area to ≥44 px touch target without bloating layout. */
+    a {
+      padding: 8px 4px;
+      display: inline-block;
+    }
+  }
+
+  /* Extra-narrow phone (≤360 px e.g. iPhone SE 1st-gen, older Android) */
+  @media (max-width: 360px) {
+    margin-top: 0.5rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    font-size: 0.7rem;
+
+    p,
+    p.mb-0 {
+      line-height: 1.35;
+    }
+  }
+}

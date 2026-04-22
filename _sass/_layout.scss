@@ -1,0 +1,234 @@
+/******************************************************************************
+ * Content
+ ******************************************************************************/
+
+@use "variables" as v;
+
+html {
+  scroll-padding-top: 45px;
+}
+
+body {
+  padding-bottom: 70px;
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.85;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: 66px;
+  }
+}
+
+body.fixed-top-nav {
+  // Add some padding for the nav-bar.
+  padding-top: 57px;
+}
+
+body.sticky-bottom-footer {
+  // Remove padding below footer.
+  padding-bottom: 0;
+}
+
+/*****************************
+ * Banner image (Facebook-style)
+ *****************************/
+
+.banner-wrapper {
+  position: relative;
+}
+
+.banner-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  border: 1px solid var(--global-divider-color);
+  border-bottom: none;
+  background-color: var(--global-card-bg-color);
+  box-shadow: 0 1px 3px rgba(0, 33, 71, 0.04), 0 8px 24px rgba(0, 33, 71, 0.06);
+  position: relative;
+}
+
+.banner-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 45%;
+  background: linear-gradient(to top, rgba(0, 33, 71, 0.35) 0%, rgba(0, 33, 71, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+.avatar-overlay {
+  position: absolute;
+  bottom: -53px;
+  right: 30px;
+  z-index: 2;
+}
+
+.avatar-img {
+  width: 160px !important;
+  height: 160px !important;
+  max-width: 160px !important;
+  border-radius: 50% !important;
+  border: 4px solid var(--global-bg-color) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+  object-fit: cover !important;
+}
+
+/*****************************
+ * Mobile responsive — banner + avatar
+ *****************************/
+
+@media (max-width: 768px) {
+  .banner-wrapper,
+  .about-card {
+    margin-left: 0.3rem !important;
+    margin-right: 0.3rem !important;
+  }
+
+  .banner-container {
+    height: 140px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .avatar-overlay {
+    bottom: -45px;
+    right: 15px;
+  }
+
+  .avatar-img {
+    width: 110px !important;
+    height: 110px !important;
+    max-width: 110px !important;
+    border: 3px solid var(--global-bg-color) !important;
+  }
+
+  .research-focus {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .post h2 {
+    font-size: 1.1rem;
+  }
+
+  .social .contact-icons {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-wrapper,
+  .about-card {
+    margin-left: 0.3rem !important;
+    margin-right: 0.3rem !important;
+  }
+
+  .banner-container {
+    height: 120px;
+  }
+
+  .avatar-overlay {
+    bottom: -35px;
+    right: 10px;
+  }
+
+  .avatar-img {
+    width: 90px !important;
+    height: 90px !important;
+    max-width: 90px !important;
+  }
+}
+
+/*****************************
+ * Research focus callout box
+ *****************************/
+
+.research-focus {
+  background-color: rgba(0, 33, 71, 0.04);
+  border-left: 3px solid var(--global-theme-color);
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.85;
+  overflow: hidden;
+}
+
+html[data-theme="dark"] .research-focus {
+  background-color: rgba(122, 162, 204, 0.1);
+}
+
+/*****************************
+ * Homepage section styling
+ *****************************/
+
+/*****************************
+ * Hide ninja-keys hotkey text
+ *****************************/
+
+ninja-keys::part(ninja-action-header) .ninja-hotkeys,
+.ninja-hotkeys,
+.ninja-hotkey {
+  display: none !important;
+}
+
+.post h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.container {
+  max-width: v.$max-content-width;
+}
+
+// Profile
+.profile {
+  img {
+    width: 100%;
+  }
+
+  img.rounded-circle {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    border: 3px solid var(--global-bg-color);
+  }
+}
+
+// Content layout uses Bootstrap's grid system with responsive columns
+// Main content flows naturally through container-mt-5 and Bootstrap grid classes
+// See _layouts/default.liquid and _includes/projects.liquid for examples
+
+/******************************************************************************
+ * Publications
+ ******************************************************************************/
+
+// Publications layout is defined in _includes/bib_search.liquid
+// Uses jekyll-scholar for BibTeX parsing and Bootstrap cards for display
+
+/*****************************************************************************
+* Projects
+*****************************************************************************/
+
+// TODO: redefine projects layout.

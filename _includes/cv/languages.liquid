@@ -1,0 +1,18 @@
+{% comment %}
+  Unified languages entry renderer.
+  Reads OneLineEntry format (label + details) — also rendered by RenderCV.
+{% endcomment %}
+
+<div class="card-text font-weight-light">
+  {% for entry in entries %}
+    <div class="language-item">
+      <strong>{{ entry.label }}:</strong> {{ entry.details }}
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+  .language-item {
+    padding: 0.5rem 0;
+  }
+</style>

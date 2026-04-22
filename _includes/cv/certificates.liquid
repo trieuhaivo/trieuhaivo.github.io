@@ -1,0 +1,18 @@
+{% comment %}
+  Unified certificates entry renderer.
+  Reads OneLineEntry format (label + details) — also rendered by RenderCV.
+{% endcomment %}
+
+<div class="card-text font-weight-light">
+  {% for entry in entries %}
+    <div class="certificate-item">
+      <strong>{{ entry.label }}:</strong> {{ entry.details | markdownify | remove: '<p>' | remove: '</p>' }}
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+  .certificate-item {
+    padding: 0.5rem 0;
+  }
+</style>

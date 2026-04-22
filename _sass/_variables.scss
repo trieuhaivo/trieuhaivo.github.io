@@ -1,0 +1,51 @@
+/*******************************************************************************
+ * Variables — Flat UI Colors palette
+ * https://flatuicolors.com + https://materialui.co/colors
+ ******************************************************************************/
+
+@use "sass:color";
+
+// Flat UI Colors (canonical)
+$red-color: #e74c3c !default;
+$red-color-dark: #c0392b !default;
+$orange-color: #f39c12 !default;
+$blue-color: #3498db !default;
+$blue-color-dark: #2980b9 !default;
+$cyan-color: #1abc9c !default;
+$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
+$green-color: #27ae60 !default;
+$green-color-lime: #2ecc71 !default;
+$green-color-dark: #16a085 !default;
+$green-color-light: #e8f8f0 !default;
+$green-color-bright: #2ecc71 !default;
+$purple-color: #2980b9 !default;
+$light-purple-color: color.adjust($purple-color, $lightness: 25%);
+$pink-color: #e74c3c !default;
+$pink-color-light: #fadbd8 !default;
+$yellow-color: #f1c40f !default;
+
+$grey-color: #95a5a6 !default;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark: #2c3e50;
+$grey-900: #34495e;
+
+$white-color: #ffffff !default;
+$black-color: #000000 !default;
+
+// Theme colors
+$code-bg-color-light: rgba($blue-color, 0.06);
+$code-bg-color-dark: #34495e !default;
+
+// Font awesome location
+$fa-font-path: "../webfonts";
+
+// Back To Top button config
+$back-to-top-z-index: 10;
+$back-to-top-bottom: 30px;
+$back-to-top-right: 30px;
+$back-to-top-diameter: 40px;
+$back-to-top-height: $back-to-top-diameter;
+$back-to-top-width: $back-to-top-diameter;
+
+// Max width default
+$max-content-width: 930px !default;

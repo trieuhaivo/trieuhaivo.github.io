@@ -1,0 +1,524 @@
+/*****************************
+ * CV shared styles
+ *****************************/
+
+div.container-link-button {
+  margin-right: 0.5rem;
+}
+
+table.table-cv {
+  background-color: transparent !important;
+
+  td,
+  th {
+    padding: 4px 2px;
+    vertical-align: top;
+  }
+}
+
+.date-column table.table-cv {
+  width: 100%;
+
+  td {
+    text-align: center;
+  }
+}
+
+a.btncv {
+  color: var(--global-text-color) !important;
+  border: 1px solid var(--global-text-color) !important;
+  border-radius: 0.125rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.7rem;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+a.btncv:hover {
+  color: var(--global-theme-color) !important;
+  border-color: var(--global-theme-color) !important;
+  text-decoration: none !important;
+}
+
+/*****************************
+ * CV TIME_TABLE styles
+ *****************************/
+
+p.location {
+  font-size: 0.75rem;
+  white-space: normal;
+  word-wrap: break-word;
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.date-column {
+  min-width: 120px;
+  max-width: 160px;
+  text-align: center;
+}
+
+.date-column table.table-cv {
+  margin: 0 auto !important;
+}
+
+.date-column .badge {
+  display: inline-block;
+  text-align: center;
+  padding: 0.3rem 0.6rem !important;
+  font-size: 0.75rem !important;
+  min-width: auto !important;
+}
+
+i.iconlocation {
+  color: var(--global-theme-color);
+  font-size: 0.8rem;
+}
+
+i.iconinstitution {
+  color: var(--global-theme-color);
+  font-size: 0.95rem;
+  margin-right: 0.3rem;
+}
+
+i.icondepartment {
+  color: var(--global-theme-color);
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
+}
+
+table.institution {
+  margin-bottom: 1.5rem;
+}
+
+td.department {
+  font-size: 0.85rem;
+  padding-bottom: 0.2rem;
+}
+
+div.container-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/*****************************
+ * CV section headings
+ *****************************/
+
+.cv h2 {
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: none !important;
+}
+
+.cv {
+  /* Scroll-room buffer: must be tall enough that clicking the LAST few TOC items
+   * (Certificates, Languages, Interests…) actually scrolls those sections to the
+   * top of the viewport. Without this, the page maxes out at body bottom and
+   * scrollspy ends up highlighting whichever section happens to sit at the top of
+   * the viewport at maxScrollY — which is the LAST section, not the clicked one.
+   * 80vh = ~enough room for any single short section to be top-aligned even on tall viewports.
+   * Do NOT trim this without verifying TOC click behavior on Certificates + Languages. */
+  padding-bottom: 80vh;
+}
+
+.cv .card {
+  padding: 1.8rem !important;
+  line-height: 1.85;
+  box-shadow: 0 1px 3px rgba(0, 33, 71, 0.04), 0 8px 24px rgba(0, 33, 71, 0.06) !important;
+  border: 1px solid var(--global-divider-color) !important;
+  border-radius: 16px !important;
+  background-color: var(--global-card-bg-color) !important;
+  transition: box-shadow 0.2s ease;
+}
+
+.cv .card:hover {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.24), 0 0 8px rgba(0, 0, 0, 0.03), 0 14px 40px rgba(0, 0, 0, 0.12) !important;
+}
+
+html[data-theme="dark"] .cv .card {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.6), 0 12px 32px rgba(0, 0, 0, 0.35) !important;
+}
+
+html[data-theme="dark"] .cv .card:hover {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.7), 0 14px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+.cv .card p {
+  line-height: 1.85;
+  margin-bottom: 0.8rem;
+}
+
+.cv h2.card-title {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  color: var(--global-theme-color) !important;
+  font-family: "Source Serif 4", "Source Serif Pro", Georgia, serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0;
+  padding-bottom: 0;
+  border-bottom: none !important;
+  border: none !important;
+  text-decoration: underline;
+  text-decoration-color: var(--global-theme-color);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.4rem;
+  display: inline-block !important;
+  width: auto !important;
+}
+
+/* About card — stats strip and action buttons */
+.about-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin: 1rem 0 1.1rem;
+  padding: 0.75rem 1rem;
+  background-color: rgba(0, 33, 71, 0.04);
+  border-left: 3px solid var(--global-theme-color);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.92rem;
+  color: var(--global-text-color);
+  line-height: 1.5;
+
+  .stat strong {
+    color: var(--global-theme-color);
+    font-weight: 700;
+  }
+
+  .stat-sep {
+    color: var(--global-text-color-light);
+    opacity: 0.6;
+  }
+}
+
+html[data-theme="dark"] .about-stats {
+  background-color: rgba(122, 162, 204, 0.08);
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 1.4rem;
+}
+
+.about-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  border-radius: 8px;
+  border: 1px solid var(--global-theme-color);
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+  i {
+    font-size: 0.85rem;
+  }
+}
+
+.about-btn-primary {
+  background-color: var(--global-theme-color);
+  color: #fff !important;
+
+  &:hover {
+    background-color: var(--global-hover-color);
+    border-color: var(--global-hover-color);
+    color: #fff !important;
+  }
+}
+
+.about-btn-secondary {
+  background-color: transparent;
+  color: var(--global-theme-color) !important;
+
+  &:hover {
+    background-color: var(--global-theme-color);
+    color: #fff !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-stats {
+    font-size: 0.88rem;
+    padding: 0.6rem 0.8rem;
+  }
+  .about-btn {
+    font-size: 0.85rem;
+    padding: 0.45rem 0.85rem;
+  }
+}
+
+.cv h6 {
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+  margin-left: 0 !important;
+}
+
+.cv .items {
+  margin-left: 0 !important;
+  padding-left: 1.2rem !important;
+}
+
+.cv p.ml-1,
+.cv p.ml-md-4 {
+  margin-left: 0 !important;
+}
+
+/*****************************
+ * CV bullet points
+ *****************************/
+
+.cv ul {
+  margin-top: 0.4rem;
+  margin-bottom: 0.6rem;
+  padding-left: 1.2rem;
+
+  li {
+    margin-bottom: 0.45rem;
+    line-height: 1.85;
+  }
+}
+
+.cv .list-group-item {
+  padding: 0.8rem 0;
+  border: none !important;
+}
+
+.cv .list-group-item .row {
+  align-items: flex-start;
+}
+
+.cv .list-group-item .col-xs-9,
+.cv .list-group-item .col-sm-9,
+.cv .list-group-item .col-md-9 {
+  margin-top: 0 !important;
+  padding-top: 0;
+}
+
+.cv .date-column {
+  /* padding-top removed: was 0.2rem, pushed the date badge below the title's baseline.
+     Both columns now start at row-top via .row { align-items: flex-start } above. */
+  padding-top: 0;
+  text-align: center !important;
+  transform: none !important;
+  width: auto !important;
+}
+
+.cv .list-group-flush {
+  border: none !important;
+  padding-left: 0 !important;
+}
+
+.cv ul.list-group {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/*****************************
+ * CV MAP styles
+ *****************************/
+
+div.container-pdf {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/*****************************
+ * CV LIST_GROUPS styles
+ *****************************/
+
+div.list-groups {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-content: center;
+  gap: 1rem;
+}
+
+div.list-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  min-width: 200px;
+}
+
+td.list-group-category {
+  color: var(--global-theme-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+td.list-group-category-icon {
+  font-size: 0.85rem;
+  color: var(--global-theme-color);
+  width: 1.6rem;
+  padding-right: 0.5rem;
+}
+
+td.list-group-name {
+  font-size: 0.85rem;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+
+td.list-group-level {
+  font-size: 0.85rem;
+  padding-left: 0.5rem;
+}
+
+td.list-group-school {
+  font-size: 0.75rem;
+  padding-left: 0.5rem;
+  text-align: center;
+}
+
+p.list-group-time {
+  font-size: 0.75rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+td.list-group-link {
+  padding-left: 0.5rem;
+}
+
+/*****************************
+ * CV TOC styles
+ *****************************/
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -45px;
+  visibility: hidden;
+}
+
+.cv .card {
+  scroll-margin-top: 45px;
+}
+
+.cv .card.mt-3 {
+  margin-top: 1.5rem !important;
+}
+
+ul.timeline {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+ul.timeline li {
+  position: relative;
+  min-height: 2.2rem;
+  color: var(--global-text-color);
+  list-style-position: inside;
+  padding-bottom: 0.3rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+span.badge-toc {
+  color: var(--global-bg-color);
+  background-color: var(--global-theme-color);
+  border-radius: 0.15rem;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700 !important;
+  display: inline-block;
+  inline-size: fit-content;
+}
+
+ul.timeline li::before {
+  content: "";
+  min-height: 2.2rem;
+  width: 1px;
+  background: var(--global-text-color);
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 2px;
+  top: -0.5rem;
+}
+
+/*****************************
+ * Mobile responsive
+ *****************************/
+
+@media (max-width: 768px) {
+  .cv .card {
+    padding: 1.2rem !important;
+    border-radius: 12px !important;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
+
+  .cv h2.card-title {
+    font-size: 1.15rem !important;
+    margin-bottom: 0.8rem;
+  }
+
+  .cv .list-group-item {
+    padding: 0.6rem 0.4rem;
+  }
+
+  .date-column {
+    min-width: 80px;
+    max-width: 100px;
+  }
+
+  .date-column .badge {
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+
+  .cv h6 {
+    font-size: 1.0rem !important;
+  }
+
+  .cv ul li {
+    font-size: 1.0rem !important;
+  }
+
+  .cv .card p {
+    font-size: 1.0rem !important;
+  }
+
+  .cv .card {
+    font-size: 1.0rem !important;
+  }
+
+  td.department,
+  td.list-group-name,
+  td.list-group-level,
+  td.list-group-category {
+    font-size: 1.0rem !important;
+  }
+
+  p.location {
+    font-size: 0.8rem !important;
+  }
+}
